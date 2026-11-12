@@ -1,0 +1,85 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{natbib}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\title{My First LaTeX Document}
+\author{Van Meet}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Hello World}
+
+Hello World!
+
+This is my first LaTeX document. The document is created using the
+\texttt{article} class and compiled to produce a formatted output.
+
+\section{My First LaTeX Document}
+
+LaTeX documents are written using commands and environments. A section
+is created with the \texttt{\textbackslash section} command, while a
+subsection is created with \texttt{\textbackslash subsection}.
+
+\subsection{Numbered List}
+
+The following is an example of a numbered list:
+
+\begin{enumerate}
+    \item Create a new document.
+    \item Write the document content in the editor.
+    \item Save the file with the \texttt{.tex} extension.
+    \item Compile the document and view the output.
+\end{enumerate}
+
+\subsection{Document Options}
+
+The document class options set the font size and paper size. This
+document uses a 12-point font and A4 paper:
+
+\[
+\texttt{\textbackslash documentclass[12pt,a4paper]\{article\}}
+\]
+
+The \texttt{\textbackslash tableofcontents} command generates the
+table of contents from the document's section headings.
+
+\section{Science!}
+
+Einstein's famous mass-energy equivalence equation is
+\(E = mc^2\). The relationship between mass and energy was introduced
+by Einstein \citep{einstein1905}.
+
+\section{Equations and Citations}
+
+The time-dependent Schr\"odinger equation can be written as
+
+\begin{equation}
+i\hbar\frac{\partial\Psi(\mathbf{r},t)}{\partial t}
+=
+\left[
+-\frac{\hbar^2}{2\mu}\nabla^2
++V(\mathbf{r},t)
+\right]\Psi(\mathbf{r},t).
+\label{eq:schrodinger}
+\end{equation}
+
+Equation~\ref{eq:schrodinger} is the Schr\"odinger equation.
+Schr\"odinger's 1926 work developed wave mechanics
+\citep{schrodinger1926}.
+
+Einstein's paper is cited using the citation key
+\texttt{einstein1905}, and Schr\"odinger's paper is cited using
+\texttt{schrodinger1926}. The entries for both papers are stored in
+the accompanying \texttt{physics.bib} file.
+
+\bibliographystyle{agu}
+\bibliography{physics}
+
+\end{document}

@@ -1,0 +1,114 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage{sectsty}
+\usepackage{fancyhdr}
+
+\chapterfont{\color{red}\bfseries\Huge}
+\sectionfont{\color{magenta}\itshape\Large}
+\subsectionfont{\color{orange}}
+
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Van Meet}
+\fancyhead[C]{Technical Writing Lab}
+\fancyhead[R]{\today}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyhead[L]{Van Meet}
+    \fancyhead[C]{Technical Writing Lab}
+    \fancyhead[R]{\today}
+    \fancyfoot[C]{\thepage}
+    \renewcommand{\headrulewidth}{0.4pt}
+}
+
+\begin{document}
+
+\begin{titlepage}
+\thispagestyle{empty}
+\centering
+\vspace*{2cm}
+{\Huge\bfseries Introduction to LaTeX\par}
+\vspace{2cm}
+{\Large Van Meet \par}
+\vspace{0.5cm}
+2025UCP1832\par
+\vspace{1.5cm}
+Course: Technical Writing Lab\par
+Course Instructor: Neeta Nain\par
+\vfill
+{\large \today\par}
+\end{titlepage}
+
+\pagestyle{fancy}
+
+\begin{abstract}
+This report introduces LaTeX as a document preparation system. It describes the basic structure of a LaTeX document, explains how chapters and sections organize content, and demonstrates how formatting and page headers can be customized. It also briefly discusses the use of LaTeX for mathematical and technical documents.
+\end{abstract}
+
+\chapter{Introduction}
+
+LaTeX is a document preparation system commonly used to create structured documents such as academic reports, research papers, and technical documentation. Instead of manually formatting each element, a writer uses commands to describe the structure and appearance of the document.
+
+LaTeX is particularly useful when a document contains mathematical expressions, references, tables, figures, or a large number of sections.
+
+\section{Why Use LaTeX?}
+
+LaTeX helps maintain consistent formatting throughout a document. It also provides tools for numbering chapters, sections, figures, tables, and equations.
+
+\subsection{Common Uses}
+
+Some common uses of LaTeX include:
+
+\begin{itemize}
+    \item Writing research papers and academic reports.
+    \item Preparing technical and mathematical documents.
+    \item Creating presentations.
+    \item Organizing long documents with chapters and sections.
+\end{itemize}
+
+\chapter{Basic Document Structure}
+
+A LaTeX document generally consists of a document class, a preamble, and a document body.
+
+\section{Document Class}
+
+The document class determines the general layout of the document. Common classes include \texttt{article}, \texttt{report}, and \texttt{book}. The \texttt{report} class is suitable for documents organized into chapters.
+
+\section{Preamble and Body}
+
+The preamble appears before \texttt{\textbackslash begin\{document\}}. It contains package imports and formatting settings. The body contains the actual document content.
+
+\subsection{Example Structure}
+
+\begin{verbatim}
+\documentclass[12pt,a4paper]{report}
+\usepackage{geometry}
+
+\begin{document}
+Document content goes here.
+\end{document}
+\end{verbatim}
+
+\chapter{Formatting and Page Layout}
+
+LaTeX allows the appearance of headings and page elements to be customized using packages and formatting commands.
+
+\section{Heading Styles}
+
+The \texttt{sectsty} package can change the appearance of chapter, section, and subsection headings. In this report, chapter titles are red, bold, and Huge; section titles are magenta, italic, and Large; and subsection titles are orange.
+
+\section{Headers and Footers}
+
+The \texttt{fancyhdr} package provides control over page headers and footers. This report places the author's name on the left, the course title in the center, and the current date on the right. The title page is configured without a header or footer.
+
+\chapter{Conclusion}
+
+LaTeX provides a structured way to prepare professional documents. The report class supports chapter-based organization, packages allow control over heading styles and page layout, and the same document source can be compiled into a PDF. These features make LaTeX useful for academic and technical writing.
+
+\end{document}

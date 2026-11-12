@@ -1,0 +1,120 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{imakeidx}
+\usepackage{amsmath}
+\usepackage{url}
+
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{Courier}
+
+\definecolor{pagebackground}{HTML}{FFF2E5}
+\pagecolor{pagebackground}
+
+\renewcommand{\thesection}{\Alph{section}}
+
+\makeindex
+
+\newsavebox{\messagebox}
+\sbox{\messagebox}{This message is written in a savebox.}
+
+\begin{document}
+
+\section{Fonts and background}
+\index{background}
+
+Try to match the page background color. Then create the following trivlist:
+
+\begin{trivlist}
+    \item This text is written in DejaVu Serif, the main font.
+
+    \item {\sffamily This text is written in DejaVu Sans, the sans-serif font.}
+
+    \item {\ttfamily This text is written in Courier, the monospace font.}
+\end{trivlist}
+
+Use the package \texttt{fontspec}. Configure TeXstudio to use XeLaTeX as the default compiler.
+
+\section{Spacing}
+
+This is the first line of a paragraph.\\
+This is another line, but not another paragraph.
+
+\vspace{1cm}
+
+This paragraph starts 1cm below. Now, observe both paragraphs given below and how they differ in hyphenation:
+
+\begin{quote}
+This is another paragraph. Incomprehensibilities and antidis\-establishmentarianisms are two long words.
+\end{quote}
+
+\begin{quote}
+This is another paragraph. Incomprehensibilities and \mbox{antidisestablishmentarianisms} are two long words.
+\end{quote}
+
+Recreate the paragraphs above and then continue from the next page, leaving space for section C.
+
+\newpage
+\vspace*{3cm}
+
+\setcounter{section}{3}
+\section{Numbering}
+\index{numbering}
+
+Ensure that all sections are numbered using alphabets.
+
+\begin{equation}
+\frac{x^2}{a^2}+\frac{y^2}{b^2}=1
+\end{equation}
+
+\begin{equation}
+x^2+y^2=1
+\end{equation}
+
+Equation 2 denotes a circle. Equation 1 is the equation of an ellipse.
+
+\section{Boxes and Lines}
+\index{savebox}
+
+\noindent\usebox{\messagebox}
+
+\noindent\usebox{\messagebox}
+
+\noindent\usebox{\messagebox}
+
+\vspace{1cm}
+
+This message is wrapped in
+
+\noindent\fbox{\parbox{5cm}{This message is wrapped in a 5cm paragraph box.}}
+
+\vspace{0.5cm}
+
+Note that these boxes are used for highlighting and layout design.
+
+\noindent\rule{\textwidth}{0.4pt}
+
+Create an index of some relevant terms from this document. Also add the bibliography as shown in the assignment. The bibliography entries are stored in the accompanying BibTeX file.
+
+\index{fonts}
+\index{fontspec}
+\index{spacing}
+\index{hyphenation}
+\index{ellipse}
+\index{circle}
+\index{boxes}
+\index{bibliography}
+\index{index}
+
+We cite the LaTeX reference \cite{oetiker2021notso} and the Overleaf bibliography guide \cite{overleafbibtex}.
+
+\clearpage
+\printindex
+
+\clearpage
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}
