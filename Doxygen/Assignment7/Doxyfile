@@ -1,0 +1,72 @@
+# ============================================================
+# Project information
+# ============================================================
+
+PROJECT_NAME           = "Simple C++ Calculation Project"
+PROJECT_BRIEF          = "A small C++ project documented with Doxygen"
+PROJECT_NUMBER         = 1.0
+
+# ============================================================
+# Input files
+# ============================================================
+
+INPUT                  = Logger.h CalculationEngine.h main.cpp
+FILE_PATTERNS          = *.h *.cpp
+RECURSIVE              = NO
+
+# ============================================================
+# Output directory
+# ============================================================
+
+OUTPUT_DIRECTORY       = docs
+
+# ============================================================
+# HTML documentation
+# ============================================================
+
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+
+# ============================================================
+# LaTeX and PDF documentation
+# ============================================================
+
+GENERATE_LATEX         = YES
+LATEX_OUTPUT           = latex
+USE_PDFLATEX           = YES
+PDF_HYPERLINKS         = YES
+PAPER_TYPE             = a4
+
+# ============================================================
+# Documentation extraction
+# ============================================================
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = YES
+
+# ============================================================
+# Documentation warnings
+# ============================================================
+
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_DOC_ERROR      = YES
+
+# ============================================================
+# TODO list
+# ============================================================
+
+GENERATE_TODOLIST      = YES
+
+# ============================================================
+# Source code browsing
+# ============================================================
+
+SOURCE_BROWSER         = YES
+
+# ============================================================
+# Output language
+# ============================================================
+
+OUTPUT_LANGUAGE        = English
